@@ -64,11 +64,10 @@ public class RegVideo extends Riproducibile implements Multimediale {
         luminosita = scanner.nextInt();
         System.out.println("Inserisci la durata: ");
         durata = scanner.nextInt();
-        System.out.println("Titolo: " + titolo);
-        System.out.println("Volume: " + getVolume());
-        System.out.println("Luminosita: " + getLuminosita());
         for (int i = 0; i < durata; i++) {
-            System.out.println("Durata: " + i);
+            System.out.println("Titolo: " + titolo );
+            System.out.println("Volume: " + getVolume());
+            System.out.println("Luminosita: " + getLuminosita());
         }
     }
 

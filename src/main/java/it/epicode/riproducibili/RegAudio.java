@@ -44,10 +44,8 @@ public class RegAudio extends Riproducibile implements Multimediale {
         volume = scanner.nextInt();
         System.out.println("Inserisci la durata: ");
         durata = scanner.nextInt();
-        System.out.println("Titolo: " + titolo);
-        System.out.println("Volume: " + getVolume());
         for (int i = 0; i < durata; i++) {
-            System.out.println("Durata: " + i);
+            System.out.println("Titolo: " + titolo + " " + getVolume());
 
 
 
