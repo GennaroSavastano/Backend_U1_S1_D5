@@ -64,11 +64,28 @@ public class RegVideo extends Riproducibile implements Multimediale {
         luminosita = scanner.nextInt();
         System.out.println("Inserisci la durata: ");
         durata = scanner.nextInt();
-        for (int i = 0; i < durata; i++) {
-            System.out.println("Titolo: " + titolo );
-            System.out.println("Volume: " + getVolume());
-            System.out.println("Luminosita: " + getLuminosita());
-        }
+        int intervallo = 0;
+
+        do {
+            for (int i = 0; i < durata; i++) {
+                System.out.println("Titolo: " + titolo + " " + getVolume());
+                System.out.println("Luminosita: " + getLuminosita());
+            }
+
+            System.out.println("Alza o Abbassa il volume con + / - o aumenta o diminuisci la luminosita con P / M");
+            String valore = scanner.next();
+            if (valore.equals("+")) {
+                alzaVolume();
+            } else if (valore.equals("-")) {
+                abbassaVolume();
+            } else if (valore.equals("P")) {
+                aumentaLuminosita();
+            } else if (valore.equals("M")) {
+                diminuisciLuminosita();
+            } else {
+                System.out.println("Valore non valido");
+            }
+        } while (intervallo < durata);
     }
 
     @Override

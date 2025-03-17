@@ -5,6 +5,7 @@ import it.epicode.multimedia.Multimediale;
 import java.util.Scanner;
 
 public class Immagine implements Multimediale {
+    private String titolo;
     private int luminosita;
 
     public void aumentaLuminosita() {
@@ -35,6 +36,15 @@ public class Immagine implements Multimediale {
         System.out.println("Inserisci la luminosita: ");
         luminosita = scanner.nextInt();
         System.out.println("Titolo: " + titolo + " " + getLuminosita());
+        System.out.println("Aumenta o diminuisci la luminosita con P / M");
+        String valore = scanner.next();
+        if (valore.equals("P")) {
+            aumentaLuminosita();
+        } else if (valore.equals("M")) {
+            diminuisciLuminosita();
+        } else {
+            System.out.println("Valore non valido");
+        }
 
     }
 

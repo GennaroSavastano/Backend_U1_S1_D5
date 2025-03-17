@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Player {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int scelta;
+        int scelta ;
         do {
             System.out.println( "---------------------------------------- ");
             System.out.println( "------------- Media Player -------------");
@@ -38,6 +38,7 @@ public class Player {
                     break;
                 case 4 :
                     System.out.println("Arrivederci");
+                    scanner.close();
                     break;
                 default:
                     System.out.println("Scelta non valida");

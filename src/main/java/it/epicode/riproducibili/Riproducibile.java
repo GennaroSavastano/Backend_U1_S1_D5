@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public abstract class Riproducibile {
     protected String titolo;
 
-    public abstract void play();
+    public abstract void play ();
  }

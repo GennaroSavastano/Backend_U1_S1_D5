@@ -44,18 +44,26 @@ public class RegAudio extends Riproducibile implements Multimediale {
         volume = scanner.nextInt();
         System.out.println("Inserisci la durata: ");
         durata = scanner.nextInt();
-        for (int i = 0; i < durata; i++) {
-            System.out.println("Titolo: " + titolo + " " + getVolume());
+        int intervallo = 0;
 
+        do {
+            for (int i = 0; i < durata; i++) {
+                System.out.println("Titolo: " + titolo + " " + getVolume());
+        }
 
-
-
+        System.out.println("Alza o Abbassa il volume con + / -");
+          String valore = scanner.next();
+            if (valore.equals("+")) {
+                alzaVolume();
+            } else if (valore.equals("-")) {
+                abbassaVolume();
+            } else {
+                System.out.println("Valore non valido");
+            }
+            } while (intervallo < durata);
     }
 
 
-
-
-}
 
     @Override
     public void esegui() {
